@@ -1,0 +1,21 @@
+<form nz-form class="login-form">
+    <nz-form-item>
+        <nz-form-control>
+            <nz-input-group nzPrefixIcon="user">
+                <input nz-input [ngModelOptions]="{standalone: true}" type="text" [(ngModel)]="account.account" placeholder="用户名" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="账号">
+            <nz-input-group nzPrefixIcon="lock">
+                <input nz-input [ngModelOptions]="{standalone: true}" type="password" [(ngModel)]="account.password" placeholder="密码" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <button nz-button class="login-form-button" (click)="login()">登录</button>
+        </nz-form-control>
+    </nz-form-item>
+</form>
